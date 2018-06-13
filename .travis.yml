@@ -1,0 +1,8 @@
+sudo: required
+services:
+    - docker
+before_install:
+    - docker pull golang:1.10.3
+script:
+    - docker build -t go-node:1.10.3-8.11.2 ./go-node-dep && docker login -u="$DOCKER_USER" -p="$DOCKER_PASSWORD" && docker push go-node:1.10.3-8.11.2
+secure: "OvTb9Z+qeBZBDCHzOskfs25ohG2oBiKMN0Pm+j0L+3FD44A8UqP1+SlXlwzyTXO3jHIyHBB8grzjDjxEpUED0NME1pww6whUx0vkmphvyOSORllP7Opjd5o8zn812WoznZygxUyIPCUrQp0Y8Jks1WKHylKudWwe/tS7tiZGom7vaK9hIzWld+zIt7mZ2Lw5xV4ioGGLeo4bbMjysDs02Gfj9ZuC0EWlfncdRP1NP3zyqz33Lsx2VjRdOMWQnUGIakOhTQQVtS8PQ8Bh9ZLBqu+uys8y/m7OV1gzojJEyJlKAh7bhBKzXNzWXNj9xhTcXnx5UuT3k2dq0SHLv4TTkIN8WkGicX5fL3Kdr4oRoscBWB6/yb1FxA4ehVxeFNQL87KwrjqUpmOCBBV1WEtV3VYxq9dVBdM3o21JFXgmj4RViEPY16KzVqE7888fR/Mp3iL24Ea+picQ3XGgV1h4IiKvWXwI51IDpU4ZsKwhsQtaegLvn+D+XvEuXtJqQeHeQ5peVdble82tPQfLkIARdDo6PdGyIIlhMO/3jCXtgzM3YrzeNQKKhDn30yQGDaoQ/dcK/X3B5gjmMnnp/5+ex1NOZhK7X+d+bDQwb9JcbgwgoB71r8r1xzBvBRtElSMGBQUVeXav4Qi65rEhyo6vHScOjA/ZXtaKaZHLmEvXS7s="
