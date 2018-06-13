@@ -5,7 +5,7 @@ before_install:
 - docker pull golang:1.10.3
 script:
 - docker build -t go-node:1.10.3-8.11.2 go-node-dep/ && docker login -u="$DOCKER_USERNAME"
-  -p="$DOCKER_PASSWORD" && docker tag go-node:1.10.3-8.11.2 $DOCKER_USERNAME/go-node:1.10.3-8.11.2 && docker push go-node:1.10.3-8.11.2
+  -p="$DOCKER_PASSWORD" && docker tag go-node:1.10.3-8.11.2 $DOCKER_USERNAME/go-node:1.10.3-8.11.2 && docker push $DOCKER_USERNAME/go-node:1.10.3-8.11.2
 env:
   global:
     secure: eU3r8YxySk7LBajreuQeZEQDd7SGwvLpGCWe0aWdzlhwTI+FQzWsBShJv+VpsRds+l0QDvgNfEG9xZy+LYHs1DteS9Wsod0wPoLk3Hgg2865nX3u6a+j43IC9WKMvGIIisSQnpdXfjX9B3snG3Lh696BAQK2sDL3xQrKRBy0V+giKXm5y6kUoyLCyUBkqIa03ieakSxsyQF7nNUY+E+E2++dKZafc9/6TEJxKYLH2oHhnq4urRufiGYwPBirBMVFHBFmX85qgVzBSslpUqzWUJM4YjhPKxX/7sk9yvbch4PqiVYE8drqfaJTyq44SaB72g+S+jCtkwATsn+sY2rawqGsN/2MXBJaOZs0yDRhfEBSWNnvxQsHB9OUXwc1NU/Uw5cfDIw1qOD+iHyzMNPDAPwdGW3HSjj34UnliNV59LEcqD3/yx+SykwJaIp/0HjrUsge0f9dOh2m2bQDahFSYiL4POrFMtNkuTt7KlWx+gD3zowwTVm9oHuvQYKz095LF8WdApFFeGwVxETAG8SgkSYZnurQ4BLlUYb1wCh21yHFYo3XyvNZel0kDpYnetQCzOtvokvwOXNhTWp+TH3THLk8KixscqAfCeOWa8vm3lJqO1VRULjc99GHh9m4vjkSYkbmMZAfHzBP2inlmcwhA8sO3IYkl6Hdq2oAZ2BDFvQ=
